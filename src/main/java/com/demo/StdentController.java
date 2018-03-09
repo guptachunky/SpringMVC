@@ -9,8 +9,8 @@ import org.springframework.web.servlet.mvc.AbstractController;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@Controller
-public class StdentController extends AbstractController {
+//@Controller
+public class StdentController extends AbstractController{
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String login(HttpServletRequest request, HttpServletResponse response) {
