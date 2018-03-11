@@ -1,9 +1,7 @@
 package com.demo;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Map;
@@ -40,7 +38,12 @@ public class DummyController {
         return requestMap.get("countryName") + " " + requestMap.get("stateName");
     }
 
-
+    @RequestMapping(value = "/submitForm.html", method = RequestMethod.POST)
+    @ResponseBody
+    String submitForm(@RequestParam("username") String username,
+                      @RequestParam("password") String password) {
+        return "Username " + username + " Password " + password;
+    }
 
 
 }

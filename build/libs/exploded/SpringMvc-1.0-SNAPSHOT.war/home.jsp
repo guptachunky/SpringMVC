@@ -11,8 +11,9 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/dummy/index">
-    Enter text here <input type="text" name="txt">
+<form action="/dummy/submitForm.html" method="post">
+    Enter text here <input type="text" name="username">
+    Enter password here <<input type="text" name="password">
     <input type="submit" value="submit">
 </form>
 </body>
