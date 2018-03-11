@@ -14,6 +14,8 @@
 
   <h1>value =
   </h1>
-  ${msg}
+  ${student.firstName}
+
+  ${student.lastName}
   </body>
 </html>

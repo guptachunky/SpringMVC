@@ -46,11 +46,20 @@ public class DummyController {
     }
 
 
+//    @RequestMapping(value = "/submitForm.html", method = RequestMethod.POST)
+//    @ResponseBody
+//    String submitForm(StudentObject studentObject) {
+//        return "Firstname " + studentObject.getFirstName() + " LastName " + studentObject.getLastName();
+//    }
+
     @RequestMapping(value = "/submitForm.html", method = RequestMethod.POST)
     @ResponseBody
-    String submitForm(StudentObject studentObject) {
-        return "Firstname " + studentObject.getFirstName() + " LastName " + studentObject.getLastName();
+    ModelAndView submitForm(@ModelAttribute("student") StudentObject studentObject) {
+        ModelAndView modelAndView = new ModelAndView("index");
+        return modelAndView;
     }
+
+
 
 
 }
