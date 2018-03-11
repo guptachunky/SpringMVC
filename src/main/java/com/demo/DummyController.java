@@ -17,7 +17,7 @@ public class DummyController {
     }
 
 
-//    @ResponseBody
+    //    @ResponseBody
     @RequestMapping("/sendingModel")
     ModelAndView sendingModel() {
         ModelAndView modelAndView = new ModelAndView("index");
@@ -38,11 +38,18 @@ public class DummyController {
         return requestMap.get("countryName") + " " + requestMap.get("stateName");
     }
 
-    @RequestMapping(value = "/submitForm.html", method = RequestMethod.POST)
+    @RequestMapping(value = "/submitForm1.html", method = RequestMethod.POST)
     @ResponseBody
     String submitForm(@RequestParam("username") String username,
                       @RequestParam("password") String password) {
         return "Username " + username + " Password " + password;
+    }
+
+
+    @RequestMapping(value = "/submitForm.html", method = RequestMethod.POST)
+    @ResponseBody
+    String submitForm(StudentObject studentObject) {
+        return "Firstname " + studentObject.getFirstName() + " LastName " + studentObject.getLastName();
     }
 
 
