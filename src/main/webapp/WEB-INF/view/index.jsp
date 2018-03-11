@@ -11,6 +11,9 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+
+  <h1>value =
+  </h1>
+  ${msg}
   </body>
 </html>
